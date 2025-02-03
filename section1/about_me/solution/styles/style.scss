@@ -1,0 +1,31 @@
+// run 'sass --watch style.scss:style.css' to capture changes
+$color: purple;
+
+%headers {
+    color: $color;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    @extend %headers;
+    text-align: center;
+}
+
+h3 {
+    @extend %headers;
+}
+
+div.dog-div {
+    h4 {
+        font-weight: bold;
+        &:hover {
+            background-color: lightblue;
+        }
+    }
+}
