@@ -5,7 +5,7 @@ Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 ## Week 1: HTML, CSS + SASS, Python & Git
 
 Starter files are in the `section1/` directory.
-Slides from section can be found [here](https://docs.google.com/presentation/d/1iUx2GvqXVAplir9XyqwtCR2qoVmLpDyDuUumAv5JHU8/edit?usp=sharing).
+Slides from section can be found [here](https://docs.google.com/presentation/d/12xURyxqRgrcYFNjGEAw8CQbesBINUmB7YIg-N0YWIwc/edit?usp=sharing).
 
 ### Goal
 
