@@ -2,7 +2,9 @@
 
 Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 
-## Week 1: HTML, CSS + SASS, Python & Git
+## Section 1: HTML, CSS + SASS, Python & Git
+
+Covers Lectures 0, 1, and 2
 
 Slides from section can be found [here](https://docs.google.com/presentation/d/12xURyxqRgrcYFNjGEAw8CQbesBINUmB7YIg-N0YWIwc/edit?usp=sharing).
 
