@@ -1,0 +1,23 @@
+h3, h1 {
+  color: purple;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.dog-div h4 {
+  font-weight: bold;
+}
+div.dog-div h4:hover {
+  background-color: lightblue;
+}
+
+/*# sourceMappingURL=style.css.map */
