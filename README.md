@@ -2,6 +2,23 @@
 
 Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 
+## Section 2: Django
+
+Example solution can be found in the `section2/` directory.
+Slides from section can be found [here](https://docs.google.com/presentation/d/1bmAfoRCbruUtq9lxbmf27HV47h2OxgxS0T_EcDbsxx0/edit?usp=sharing).
+
+### Goal
+
+Make a Django project with one sub app that displays your age on one page, and gets your age on another via a form.
+
+To make a new Django project, run `django-admin startproject PROJECT_NAME` in the appropriate directory.
+
+To make a new app, run `python manage.py startapp APP_NAME`.
+
+To start your project, run `python manage.py runserver`.
+
+**Note:** You might have to install the `dateutil` Python module.
+
 ## Section 1: HTML, CSS + SASS, Python & Git
 
 Covers Lectures 0, 1, and 2

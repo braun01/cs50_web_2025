@@ -1,0 +1,10 @@
+{% extends "display_age/layout.html" %}
+
+{% block body %}
+<!-- include the form here -->
+    <form action="{% url 'display_age:get_age' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+{% endblock %}
