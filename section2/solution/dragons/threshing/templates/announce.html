@@ -1,0 +1,13 @@
+{% extends "layout.html" %} 
+{% load static %}
+{% block body %}
+    {% if request.session.dragon and request.session.name%}
+        <h1>Congratulations!</h1>
+        <p>{{request.session.name}} has bonded a <span class="{{request.session.dragon}}">{{request.session.dragon}}</span> dragon!</p>
+        <img alt="{{request.session.dragon}} picture" src="{% static "img/" %}{{request.session.dragon}}-dragon.jpg" height="300" width="300">
+        <p><a href="{% url "threshing:bond" %}">Bond again</a></p>
+    {% else %}
+        <h1>Welcome!</h1>
+        <p>Looks like you haven't bonded a dragon yet. Off to <a href="{% url "threshing:bond" %}">Threshing</a> with you!</p>
+    {% endif %}
+{% endblock body %}
