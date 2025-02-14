@@ -4,12 +4,15 @@ Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 
 ## Section 2: Django
 
-Example solution can be found in the `section2/` directory.
+Solutions can be found in the `section2/` directory, as well as another example project.
+
 Slides from section can be found [here](https://docs.google.com/presentation/d/1bmAfoRCbruUtq9lxbmf27HV47h2OxgxS0T_EcDbsxx0/edit?usp=sharing).
 
 ### Goal
 
-Make a Django project with one sub app that displays your age on one page, and gets your age on another via a form.
+You're a cadet ready to bond your dragon! Make a Django project with one sub app that prompts for your name and preferred dragon species on one page via a form, and then announces your newly bonded dragon on another!
+
+Your project should be called `dragons` and your app should be called `threshing`.
 
 To make a new Django project, run `django-admin startproject PROJECT_NAME` in the appropriate directory.
 
@@ -17,7 +20,7 @@ To make a new app, run `python manage.py startapp APP_NAME`.
 
 To start your project, run `python manage.py runserver`.
 
-**Note:** You might have to install the `dateutil` Python module.
+Remember your django checklist! We will be using session variables for this project, so remember to run `python manage.py migrate`.
 
 ## Section 1: HTML, CSS + SASS, Python & Git
 
