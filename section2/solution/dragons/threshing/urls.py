@@ -3,6 +3,6 @@ from . import views
 
 app_name = 'threshing'
 urlpatterns = [
-    path('bond', views.bond, name='bond'),
-    path('announce', views.announce, name='announce')
+    path('bond/', views.bond, name='bond'),
+    path('announce/', views.announce, name='announce')
 ]

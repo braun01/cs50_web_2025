@@ -10,7 +10,7 @@ DRAGONS = [
     ('green', 'Green'),
     ('blue', 'Blue'),
     ('black', 'Black'),
-    ('IYKYK', 'IYKYK'),
+    ('iykyk', 'IYKYK'),
 ]
 
 

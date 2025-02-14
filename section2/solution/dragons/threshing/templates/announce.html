@@ -4,7 +4,11 @@
     {% if request.session.dragon and request.session.name%}
         <h1>Congratulations!</h1>
         <p>{{request.session.name}} has bonded a <span class="{{request.session.dragon}}">{{request.session.dragon}}</span> dragon!</p>
-        <img alt="{{request.session.dragon}} picture" src="{% static "img/" %}{{request.session.dragon}}-dragon.jpg" height="300" width="300">
+        {% if request.session.dragon == 'iykyk' %}
+            <p>No picture cause spoilers. If you know, you know.</p>
+        {% else %}
+            <img alt="{{request.session.dragon}} picture" src="{% static "img/" %}{{request.session.dragon}}-dragon.jpg" height="300" width="300">
+        {% endif %}
         <p><a href="{% url "threshing:bond" %}">Bond again</a></p>
     {% else %}
         <h1>Welcome!</h1>
