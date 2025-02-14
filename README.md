@@ -4,6 +4,8 @@ Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 
 ## Section 2: Django
 
+Solutions can be found in the `section2/` directory, as well as another example project.
+
 Slides from section can be found [here](https://docs.google.com/presentation/d/1bmAfoRCbruUtq9lxbmf27HV47h2OxgxS0T_EcDbsxx0/edit?usp=sharing).
 
 ### Goal
