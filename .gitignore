@@ -60,6 +60,8 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+*.pyc
+media
 
 # Flask stuff:
 instance/
@@ -169,3 +171,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# MacOs
+*.DS_Store
