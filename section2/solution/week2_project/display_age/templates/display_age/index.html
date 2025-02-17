@@ -1,0 +1,18 @@
+{% extends "display_age/layout.html" %}
+
+{% block body %}
+    <div>
+        <h1>Hello!</h1>
+        <p>Today's date is {{ today }}</p>
+        {% if name and birthday and age %}
+            <p>{{name}} was born on {{ birthday.day }}-{{ birthday.month }}-{{birthday.year}}</p>
+            <p>You are {{ age }} years old!</p>
+        {% else %}
+            <p>Click the link below to enter your information!</p>
+        {% endif%}
+    </div>
+
+    <div>
+        <a href="{% url 'display_age:get_age' %}">Enter New Birthday</a>
+    </div>
+{% endblock %}
