@@ -5,7 +5,7 @@ Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 ## Week 3: SQL, Models, & Migrations
 
 Example solution can be found in the `week3/` directory.
-Slides from section can be found [here](https://docs.google.com/presentation/d/1i7-8WdxeY-RL-hDLCwPLvWFSDoAxuNjwof1ucM_N5TE/edit?usp=sharing).
+Slides from section can be found [here](https://docs.google.com/presentation/d/1mkGWcttUyoWHD94YHvap2hYcQw6wy2cw7TbHtHDBH3A/edit?usp=sharing).
 
 ### Goal:
 
