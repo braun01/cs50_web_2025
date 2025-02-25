@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block body %}
+<h1>Roster</h1>
+<hr />
+<table class="table" style="text-align: center;">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Eye color</th>
+            <th>Age</th>
+            <th>Total courses</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %} 
+        {% empty %}
+            <tr>
+                <td colspan="4">No student data available</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock body %}
