@@ -15,6 +15,8 @@ You should define both a Student and a Course model. These models should be rela
 
 You should also define admin views for each of your models so you can add students and courses.
 
+Finally, try displaying your students in the table in `roster.html` in the templates/ of the students app.
+
 Remember your **migration** workflow:
 
 1. Define models in the app's model.py
