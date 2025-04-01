@@ -2,6 +2,18 @@
 
 Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 
+## Week 5: UX and React
+
+Example solution will be posted after section in the `section5/quiz` directory. Section slides can be found [here](https://docs.google.com/presentation/d/1TfPTLkD3-kXIlqcFVk1HcclHa1g4KdF6VD-HBJFYkU0/edit?usp=sharing).
+
+### Goal:
+
+Fill in the TODOs in a Quizzlet Lite app and in the process, familiarize yourself a little bit with React.
+
+Already defined in your distro code are the primary paths and template you will need. You will also find some skeleton code for your React components. Start by familiarizing yourself with the template, and then take a look at the existing React components such as the `Card`, `Prompter` and `Quizzlet` components.
+
+When your app is done, your user will be able to click through prompted cards, indicate if they got the answer right or wrong, and view the cards in teh corresponding right or wrong sections. As an added bonus, see if you can make the UX a bit better by allowing the user to hide/show cards in a section.
+
 ## Week 4: Javascript
 
 Example solution will be posted after section in the `section4/` directory.
@@ -82,16 +94,16 @@ Starter files are in the `section1/` directory.
 
 Make a simple HTML page about yourself. Your page should include the following:
 
-- Your name
-- Two fun facts
-- At least 3 pictures (can be of anything)
-- A link to your favorite Google search
+-   Your name
+-   Two fun facts
+-   At least 3 pictures (can be of anything)
+-   A link to your favorite Google search
 
 You should include but are not limited to the following html tags:
 
-- \<h1\>
-- \<li\>
-- \<img\>
-- \<a\>
+-   \<h1\>
+-   \<li\>
+-   \<img\>
+-   \<a\>
 
 In styles/style.scss, write some styles to make your page look a little nicer. **Bonus points** if you use flexbox or boostrap on top of your own styles. Remember to compile your SCSS (or watch the file) to pick up updates.
