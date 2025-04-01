@@ -174,3 +174,9 @@ cython_debug/
 
 # MacOs
 *.DS_Store
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
