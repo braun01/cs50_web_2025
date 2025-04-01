@@ -1,0 +1,96 @@
+h1 {
+    color: blue;
+}
+
+div {
+    margin: 15px;
+}
+
+
+#animate-me {
+    border-radius: 2px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    align-self: center;
+    padding: 20px;
+    width: max-content;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#animate-me:hover {
+    background-color: yellow;
+}
+
+/* Animation classes */
+.bounce {
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.slide-in {
+    animation-name: slide-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 500ms;
+}
+
+/* Animations */
+
+@keyframes bounce {
+    20%, 60%, 80%, 100% { 
+        transform: translateY(0%);
+    }
+    50% { 
+        transform: translateY(-30%); 
+    }
+    70% { 
+        transform: translateY(-25%); 
+    }
+    90% { 
+        transform: translateY(-18%); 
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        margin-left: 0%;
+    }
+    40% {
+        margin-left:150%;
+    }
+    80% {
+        margin-left: 40%;
+    }
+    /* 90% {
+        margin-left: 48%;
+    } */
+    100% {
+        margin-left: 50%
+    }
+
+}
