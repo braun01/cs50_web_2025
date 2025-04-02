@@ -31,6 +31,7 @@ function Quizzlet() {
     // here we split up our state so we can make updates independently, which gives React more flexibility to determine re-renders
     const [currentCardIdx, setCurrentCardIdx] = React.useState(0);
     const [correctCards, setCorrectCards] = React.useState([]);
+    const [incorrectCards, setIncorrectCards] = React.useState([]);
 
     // Defining React callbacks in this way helps React track the memory location of this function
     // in the event that the parent component needs to re-render for any reason
@@ -39,8 +40,10 @@ function Quizzlet() {
         setCurrentCardIdx(currentCardIdx + 1);
     }, [correctCards, currentCardIdx]); // these are dependencies React will check for changes to determine what must be re-rendered
 
-    // TODO #1: define this callback (hint: you may need to define more state!)
-    const onIncorrect = React.useCallback(() => {}, []);
+    const onIncorrect = React.useCallback(() => {
+        setIncorrectCards([...incorrectCards, cards[currentCardIdx]]);
+        setCurrentCardIdx(currentCardIdx + 1);
+    }, [incorrectCards, currentCardIdx]);
 
     return (
         <div class="row">
@@ -49,22 +52,28 @@ function Quizzlet() {
                     <h3>Correct</h3>
                     <hr />
                     <div id="correct-div">
-                        {/* TODO #3: Render a CardList with the correct cards*/}
-                        {/* Hint: try rendering a single Card first */}
+                        {/* This is an example of how to pass state as a prop from the parent Quizzlet to the child CardList */}
+                        <CardList cards={correctCards} />
                     </div>
                 </div>
                 <div class="row">
                     <h3>Incorrect</h3>
                     <hr />
                     <div id="incorrect-div">
-                        {/* TODO #4: Render a CardList with the incorrect cards*/}
+                        <CardList cards={incorrectCards} />
                     </div>
                 </div>
             </div>
             <div class="col-md">
                 <div id="card-start-div">
-                    {/* TODO #2: render a Prompter here, passing the appropriate props */}
+                    {/* onCorrect and onIncorrect are examples of callbacks defined in the parent Quizzlet that get passed to the child */}
                     {/* This pattern allows an event that is defined in the child to affect state in the parent. It is how a child can pass state back to a parent */}
+                    <Prompter
+                        cards={cards}
+                        currentCardIdx={currentCardIdx}
+                        onCorrect={onCorrect}
+                        onIncorrect={onIncorrect}
+                    />
                 </div>
             </div>
         </div>
@@ -89,13 +98,27 @@ function Card({ question, answer }) {
     );
 }
 
-function ShowMoreToggle() {
-    // TODO #5: implement this checkbox toggle. You'll want an initial value for the input, and a function to handle
-    // a value change
+function ShowMoreToggle({ checked, handleChecked }) {
+    return (
+        <div>
+            <input
+                type="checkbox"
+                name="show-more"
+                onChange={handleChecked}
+                checked={checked}
+            />
+            <label for="show-more">Show More</label>
+        </div>
+    );
 }
 
 function CardList({ cards }) {
-    // TODO #6: implement "show more" functionality
+    const [showMore, setShowMore] = React.useState(false);
+
+    const handleChecked = React.useCallback(() => {
+        console.log('got checked');
+        setShowMore(!showMore);
+    }, [setShowMore, showMore]);
 
     const cardsToRender = cards.map((card) => (
         <Card question={card.question} answer={card.answer} />
@@ -103,7 +126,31 @@ function CardList({ cards }) {
 
     return (
         <div>
-            {cards.length ? <ul>{cardsToRender}</ul> : <p>No cards to show</p>}
+            {cards.length ? (
+                <div>
+                    <ShowMoreToggle
+                        checked={showMore}
+                        handleChecked={handleChecked}
+                    />
+                    {showMore ? (
+                        <ul>{cardsToRender}</ul>
+                    ) : (
+                        <div>
+                            <ul>
+                                <Card
+                                    question={cards[cards.length - 1].question}
+                                    answer={cards[cards.length - 1].answer}
+                                />
+                            </ul>
+                            {cards.length - 1 > 0 && (
+                                <p>+ {cards.length - 1} more</p>
+                            )}
+                        </div>
+                    )}
+                </div>
+            ) : (
+                <p>No cards to show</p>
+            )}
         </div>
     );
 }
