@@ -4,31 +4,26 @@ function Quizzlet() {
             id: 0,
             question: 'What day is it?',
             answer: 'Today',
-            gotCorrect: undefined,
         },
         {
             id: 1,
             question: 'Is Millie a dog?',
             answer: 'Yup',
-            gotCorrect: undefined,
         },
         {
             id: 2,
             question: 'What color do red and yellow make?',
             answer: 'Orange',
-            gotCorrect: undefined,
         },
         {
             id: 3,
             question: 'If a tree falls in the woods, etc etc.?',
             answer: "Who's to say",
-            gotCorrect: undefined,
         },
         {
             id: 4,
             question: 'Are blueberries really blue?',
             answer: 'No',
-            gotCorrect: undefined,
         },
     ];
 
@@ -42,12 +37,12 @@ function Quizzlet() {
     // in the event that the parent component needs to re-render for any reason
     const onCorrect = React.useCallback(() => {
         setCorrectCards([...correctCards, cards[currentCardIdx]]); // React does not like it when we mutate arrays, so we create and update a copy
-        setCurrentCardIdx(() => currentCardIdx + 1);
+        setCurrentCardIdx(currentCardIdx + 1);
     }, [correctCards, currentCardIdx]); // these are dependencies React will check for changes to determine what must be re-rendered
 
     const onIncorrect = React.useCallback(() => {
         setIncorrectCards([...incorrectCards, cards[currentCardIdx]]);
-        setCurrentCardIdx(() => currentCardIdx + 1);
+        setCurrentCardIdx(currentCardIdx + 1);
     }, [incorrectCards, currentCardIdx]);
 
     return (
@@ -161,16 +156,6 @@ function CardList({ cards }) {
 }
 
 function Prompter({ cards, currentCardIdx, onCorrect, onIncorrect }) {
-    // stay in bounds
-    if (currentCardIdx < 0 || currentCardIdx >= cards.length) {
-        return (
-            <div>
-                Unable to render card #{currentCardIdx + 1} or no more cards to
-                render
-            </div>
-        );
-    }
-
     return (
         <div>
             {!cards ? (
