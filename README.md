@@ -12,7 +12,7 @@ Fill in the TODOs in a Quizzlet Lite app and in the process, familiarize yoursel
 
 Already defined in your distro code are the primary paths and template you will need. You will also find some skeleton code for your React components. Start by familiarizing yourself with the template, and then take a look at the existing React components such as the `Card`, `Prompter` and `Quizzlet` components.
 
-When your app is done, your user will be able to click through prompted cards, indicate if they got the answer right or wrong, and view the cards in teh corresponding right or wrong sections. As an added bonus, see if you can make the UX a bit better by allowing the user to hide/show cards in a section.
+When your app is done, your user will be able to click through prompted cards, indicate if they got the answer right or wrong, and view the cards in the corresponding right or wrong sections. As an added bonus, see if you can make the UX a bit better by allowing the user to hide/show cards in a section.
 
 ## Week 4: Javascript
 
