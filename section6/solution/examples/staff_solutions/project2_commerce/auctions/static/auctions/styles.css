@@ -1,0 +1,13 @@
+body {
+    padding: 10px;
+}
+
+.card > a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-img {
+    height: 250px;
+    object-fit: contain;
+}

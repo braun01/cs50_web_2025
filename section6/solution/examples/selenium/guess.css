@@ -1,0 +1,22 @@
+.wrong {
+    animation-name: shake;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(-5%);
+    }
+    50% {
+        transform: translateX(3%);
+    }
+    75% {
+        transform: translateX(-2%);
+    }
+    100% {
+        transform: translateX(1%);
+    }
+}
