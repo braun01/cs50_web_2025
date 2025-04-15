@@ -21,7 +21,7 @@ Make sure you have installed both Selenium via `pip install selenium` and the Ch
 
 #### Django Testing
 
-Download the [staff solution](https://vault.cs50.io/f37ab9cd-9ab5-4ebc-9971-f193defd1037) to the Commerce project. In `auctions/tests.py`, write a set of tests to ensure that the app is working as intended. Solution test code is in `week6/solution/examples/commerce_example/`
+Download the [staff solution](https://vault.cs50.io/f37ab9cd-9ab5-4ebc-9971-f193defd1037) to the Commerce project. In `auctions/tests.py`, write a set of tests to ensure that the app is working as intended. Solution test code is in `section6/solution/examples/commerce_example/`
 
 ## Week 5: UX and React
 
