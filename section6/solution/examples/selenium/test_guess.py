@@ -6,23 +6,26 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
+
 def file_uri(filename):
     return pathlib.Path(os.path.abspath(filename)).as_uri()
+
 
 driver = webdriver.Chrome()
 driver.get(file_uri("guess.html"))
 
 # figure out what the number is
-min_guess = 1
-max_guess = 10000
+MIN_GUESS = 1
+MAX_GUESS = 10000
 
-# get the fields. These will come back regardless of whetehr the element is currently visible or not
+# get the fields. These will come back regardless of whether the element is currently visible or not
 input_tag = driver.find_element(By.ID, "guess")
 won = driver.find_element(By.ID, "won")
 feedback_div = driver.find_element(By.ID, "feedback")
 
 while True:
-    guess = (max_guess + min_guess) // 2
+    # We are still binary searching! But you could also have used a for loop
+    guess = (MAX_GUESS + MIN_GUESS) // 2
     input_tag.send_keys(guess)
     input_tag.send_keys(Keys.ENTER)
 
