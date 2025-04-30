@@ -2,7 +2,7 @@
 
 Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 
-## Week 6: Testing & CI/CD
+## Week 7: Scalability & Security
 Section slides [here](https://docs.google.com/presentation/d/1rOl66CSYiD9y7ri4c1L7vIUpleRKdhpFW53V3A-yx0o/edit?usp=sharing)
 
 No activity this week! Good luck on your final projects!
