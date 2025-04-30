@@ -3,6 +3,11 @@
 Activities and their solutions for Athena Braun's 2025 CSCI 33-a Section.
 
 ## Week 6: Testing & CI/CD
+Section slides [here](https://docs.google.com/presentation/d/1rOl66CSYiD9y7ri4c1L7vIUpleRKdhpFW53V3A-yx0o/edit?usp=sharing)
+
+No activity this week! Good luck on your final projects!
+
+## Week 6: Testing & CI/CD
 
 Example solutions can be found in the `section6/solution` directory. Note that only the example tests for the Commerce project will be posted (rather than the whole solution to the project).
 Section slides can be found [here](https://docs.google.com/presentation/d/1nZF1ZIs16MLEjdcRNeAQnU9RNx6goEWjMgKLDHXiv8g/edit?usp=sharing).
